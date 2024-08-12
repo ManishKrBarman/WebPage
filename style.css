@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* padding: 25px; */
+    background-color: rgba(250, 252, 228, 0.647);
+    color: black;
+    font-size: 25px;
+}
+
+.dark-mode {
+    background-color: rgb(1, 29, 48);
+    color: rgba(255, 251, 0, 0.98);
+    border-bottom: 3px solid yellow;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+    /* background-color: wheat; */
+    border-bottom: 5px solid #21130d;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.logo img:hover {
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    display: flex;
+    list-style: none;
+    padding-right: 20px;
+    font-family: 'Ubuntu Sans';
+    font-weight: bold;
+    font-size: medium;
+    align-items: center;
+}
+
+li:hover {
+    color: rgb(132, 0, 255);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dark-mode .logo a img {
+    filter: brightness(0) invert(0.85);
+}
+
+.dark-mode li:hover {
+    color: rgb(0, 255, 247);
+}
+
+ul li svg {
+    /* opacity: 0.5%; */
+    rotate: 270deg;
+}
+
+ul li svg:hover {
+    opacity: 100%;
+    rotate: 360deg;
+    transition: all 1s ease;
+}
+
+.dark-mode ul li svg {
+    filter: brightness(0) invert(1);
+}
+
+li svg:hover {
+    cursor: pointer;
+}
+
+.dark {
+    background: none;
+    border: none;
+}
+
+.dark svg {
+    width: 25px;
+    height: 25px;
+    fill: #453f6e;
+    transition: fill 0.3s ease;
+}
+
+.dark svg:hover {
+    fill: rgb(207, 23, 23);
+    cursor: pointer;
+}
+
+.dark-mode .dark svg {
+    fill: #ff0000;
+}
+
+.dark-mode .dark svg:hover {
+    fill: rgb(246, 246, 246);
+    cursor: pointer;
+}
