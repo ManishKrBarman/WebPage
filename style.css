@@ -16,6 +16,10 @@ body {
     border-bottom: 3px solid yellow;
 }
 
+a {        
+    text-decoration: none;
+}
+
 header {
     position: sticky;
     top: 0;
