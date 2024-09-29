@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODES</title>
+    <link rel="stylesheet" href="code_style.css">
+</head>
+
+<body>
+    <h1>CODES</h1>
+    <div class="container">
+        <p class="introduce">
+            Hi, this is Manish. I am here to help you with the coding problems. Feel free to ask or you can check out
+            the below scripts : )
+        </p>
+        <code>
+            <p class="question">Q1. Find the area of a triangle using Heron's formula</p>
+            #include &lt;stdio.h&gt;<br>
+            #include &lt;math.h&gt;<br>
+            int main(){<br>
+            int a, b, c;<br>
+            float s, area;<br>
+            printf("Enter value of 1st side: ");<br>
+            scanf("%d", &a);<br>
+            printf("Enter value of 2nd side: ");<br>
+            scanf("%d", &b);<br>
+            printf("Enter value of 3rd side: ");<br>
+            scanf("%d", &c);<br>
+            s = (a + b + c) / 2;<br>
+            area = sqrt(s * (s - a) * (s - b) * (s - c));<br>
+            printf("Area of the triangle of sides %d, %d & %d is: %f", a, b, c, area);<br>
+            return 0;<br>
+            }<br>
+        </code>
+    </div>
+</body>
+
+</html>

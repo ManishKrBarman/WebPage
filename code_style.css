@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Pacifico&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: rgb(4, 4, 4);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+h1 {
+    position: sticky;
+    top: 0;
+    margin-top: 0;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    color: rgb(3, 3, 3);
+    background-color: rgba(224, 130, 36, 0.896);
+    box-shadow: 0 4px 8px 0 rgba(253, 71, 5, 0.921), 0 6px 20px 0 rgba(255, 162, 2, 0.866);
+}
+
+h1:hover {
+    color: rgb(251, 249, 248);
+    background-color: rgba(0, 0, 0, 0.985);
+    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(248, 10, 10, 0.985);
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.question {
+    color: rgb(112, 69, 4);
+    background-color: rgb(248, 214, 64);
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-size: small;
+    font-weight: bolder;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(80, 222, 233, 0.384);
+}
+
+code {
+    color: aliceblue;
+    background-color: rgb(3, 3, 3);
+    width: fit-content;
+    padding: 15px;
+    margin: 10px;
+    text-align: start;
+    font-size: larger;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(253, 71, 5, 0.921), 0 6px 20px 0 rgba(80, 222, 233, 0.384);
+}
+
+code:hover {
+    color: aliceblue;
+    background-color: rgb(3, 3, 3);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(248, 10, 10, 0.985);
+    transform: translate3d(0, -2px, 0);
+}
+
+.introduce {
+    color: rgb(243, 243, 243);
+    font-size: larger;
+    font-family: "Roboto Slab", serif;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 3s steps(80, end),
+        blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
