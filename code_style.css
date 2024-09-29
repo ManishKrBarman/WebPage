@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scrollbar-width: none;
 }
 
@@ -12,24 +13,29 @@ body {
     background-color: rgb(4, 4, 4);
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Roboto Slab", serif;
 }
 
 h1 {
     position: sticky;
     top: 0;
-    margin-top: 0;
+    width: 100%;
     text-align: center;
     font-family: "Pacifico", cursive;
     color: rgb(3, 3, 3);
     background-color: rgba(224, 130, 36, 0.896);
-    box-shadow: 0 4px 8px 0 rgba(253, 71, 5, 0.921), 0 6px 20px 0 rgba(255, 162, 2, 0.866);
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(253, 71, 5, 0.921), 0 6px 20px rgba(255, 162, 2, 0.866);
+    font-size: 2rem;
 }
 
 h1:hover {
     color: rgb(251, 249, 248);
     background-color: rgba(0, 0, 0, 0.985);
-    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(248, 10, 10, 0.985);
+    box-shadow: 0 4px 8px rgba(253, 241, 5, 0.921), 0 6px 20px rgba(248, 10, 10, 0.985);
 }
 
 .container {
@@ -37,64 +43,159 @@ h1:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.code-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+}
+
+.code-item {
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    height: fit-content;
+    margin: 20px auto;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(253, 71, 5, 0.921), 0 6px 20px rgba(80, 222, 233, 0.384);
+    transition: transform 0.2s;
+}
+
+.code-item:hover {
+    box-shadow: 0 4px 8px rgba(253, 241, 5, 0.921), 0 6px 20px rgba(248, 10, 10, 0.985);
+    transform: translateY(-2px);
 }
 
 .question {
     color: rgb(112, 69, 4);
     background-color: rgb(248, 214, 64);
-    width: fit-content;
-    padding: 5px;
+    padding: 10px;
+    height: fit-content;
     margin-bottom: 20px;
-    text-align: justify;
     font-family: "Edu AU VIC WA NT Guides", cursive;
-    font-size: small;
+    font-size: 1rem;
     font-weight: bolder;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(80, 222, 233, 0.384);
+    box-shadow: 0 4px 8px rgba(253, 241, 5, 0.921), 0 6px 20px rgba(80, 222, 233, 0.384);
+    text-align: justify;
 }
 
 code {
-    color: aliceblue;
-    background-color: rgb(3, 3, 3);
-    width: fit-content;
+    display: contents;
+    margin-top: 10px;
+    color: white;
     padding: 15px;
-    margin: 10px;
-    text-align: start;
-    font-size: larger;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(253, 71, 5, 0.921), 0 6px 20px 0 rgba(80, 222, 233, 0.384);
+    font-size: 1rem;
 }
 
-code:hover {
-    color: aliceblue;
-    background-color: rgb(3, 3, 3);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(253, 241, 5, 0.921), 0 6px 20px 0 rgba(248, 10, 10, 0.985);
-    transform: translate3d(0, -2px, 0);
-}
 
 .introduce {
     color: rgb(243, 243, 243);
-    font-size: larger;
-    font-family: "Roboto Slab", serif;
-    margin: 20px;
-    padding: 10px;
+    font-size: 1.2rem;
     text-align: center;
     font-weight: bolder;
-    overflow: hidden;
+    margin: 10px auto;
+    padding: 10px;
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+    display: inline-block;
+    max-width: 100%;
     white-space: nowrap;
+    overflow: hidden;
+    position: relative;
     animation:
-        typing 3s steps(80, end),
-        blink-caret 0.5s step-end infinite;
+        typing 4s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+    /* slide-up 5s linear 1 ; */
 }
 
 @keyframes typing {
     from {
-        width: 0
+        width: 0;
     }
 
     to {
-        width: 100%
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: wheat;
+    }
+}
+
+/* 
+@keyframes slide-up {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+} */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .question {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .code-grid {
+        grid-template-columns: 1fr;
+        /* Stack items vertically on small screens */
+    }
+
+    .introduce {
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+        padding: 6px;
+    }
+
+    .question {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    code {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .introduce {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100vw;
     }
 }
