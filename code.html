@@ -15,25 +15,153 @@
             Hi, this is Manish. I am here to help you with the coding problems. Feel free to ask or you can check out
             the below scripts : )
         </p>
-        <code>
-            <p class="question">Q1. Find the area of a triangle using Heron's formula</p>
-            #include &lt;stdio.h&gt;<br>
-            #include &lt;math.h&gt;<br>
-            int main(){<br>
-            int a, b, c;<br>
-            float s, area;<br>
-            printf("Enter value of 1st side: ");<br>
-            scanf("%d", &a);<br>
-            printf("Enter value of 2nd side: ");<br>
-            scanf("%d", &b);<br>
-            printf("Enter value of 3rd side: ");<br>
-            scanf("%d", &c);<br>
-            s = (a + b + c) / 2;<br>
-            area = sqrt(s * (s - a) * (s - b) * (s - c));<br>
-            printf("Area of the triangle of sides %d, %d & %d is: %f", a, b, c, area);<br>
-            return 0;<br>
-            }<br>
-        </code>
+        <div class="code-grid">
+            <div class="code-item">
+                <p class="question">Q1. Find the area of a triangle using Heron's formula</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    #include &lt;math.h&gt;<br>
+                    int main(){<br>
+                    int a, b, c;<br>
+                    float s, area;<br>
+                    printf("Enter value of 1st side: ");<br>
+                    scanf("%d", &a);<br>
+                    printf("Enter value of 2nd side: ");<br>
+                    scanf("%d", &b);<br>
+                    printf("Enter value of 3rd side: ");<br>
+                    scanf("%d", &c);<br>
+                    s = (a + b + c) / 2;<br>
+                    area = sqrt(s * (s - a) * (s - b) * (s - c));<br>
+                    printf("Area of the triangle of sides %d, %d & %d is: %f", a, b, c, area);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q2. Find the factorial of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, i, factorial = 1;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>
+                    for (i = 1; i <= n; i++) {<br>
+                    factorial *= i;<br>
+                    }<br>
+                    printf("Factorial of %d is: %d", n, factorial);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q3. Find the sum of digits of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, sum = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>
+                    while (n != 0) {<br>
+                    sum += n % 10;<br>
+                    n = n / 10;<br>
+                    }<br>
+                    printf("Sum of digits of %d is: %d", n, sum);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q4. Find the reverse of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, reverse = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>
+                    while (n != 0) {<br>
+                    reverse = reverse * 10 + n % 10;<br>
+                    n = n / 10;<br>
+                    }<br>
+                    printf("Reverse of %d is: %d", n, reverse);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q5. Find the sum of even digits of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, sum = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>    
+                    while (n != 0) {<br>
+                    if ((n % 10) % 2 == 0) {<br>    
+                    sum += n % 10;<br>
+                    }<br>
+                    n = n / 10;<br>
+                    }<br>    
+                    printf("Sum of even digits of %d is: %d", n, sum);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q6. Find the sum of odd digits of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, sum = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>    
+                    while (n != 0) {<br>
+                    if ((n % 10) % 2 != 0) {<br>    
+                    sum += n % 10;<br>
+                    }<br>
+                    n = n / 10;<br>
+                    }<br>    
+                    printf("Sum of odd digits of %d is: %d", n, sum);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q7. Find the sum of even and odd digits of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, sum = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>    
+                    while (n != 0) {<br>
+                    if ((n % 10) % 2 == 0) {<br>    
+                    sum += n % 10;<br>
+                    }<br>
+                    n = n / 10;<br>
+                    }<br>    
+                    printf("Sum of even digits of %d is: %d", n, sum);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+            <div class="code-item">
+                <p class="question">Q8. Find the sum of digits of a number</p>
+                <code>
+                    #include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                    int n, sum = 0;<br>
+                    printf("Enter a number: ");<br>
+                    scanf("%d", &n);<br>
+                    while (n != 0) {<br>
+                    sum += n % 10;<br>
+                    n = n / 10;<br>
+                    }<br>
+                    printf("Sum of digits of %d is: %d", n, sum);<br>
+                    return 0;<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
     </div>
 </body>
 
