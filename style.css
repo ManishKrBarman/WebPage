@@ -262,9 +262,9 @@ a:hover::after {
         position: absolute;
         width: 200px;
         height: 200px;
-        background: linear-gradient(135deg, #ff0000, #ffee00);
-        border: 1px solid #ccc;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #003757, #a02fdd);
+        border: 1px solid #002d7a;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         border-radius: 20%;
     }
 }
