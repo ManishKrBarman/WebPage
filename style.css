@@ -95,6 +95,11 @@ li:hover {
     user-select: none;
 }
 
+.logo-img {
+    filter: brightness(100);
+    filter: invert(1);
+}
+
 /* Animation for gradient */
 @keyframes gradientAnimation {
     0% {
@@ -209,7 +214,7 @@ li:hover {
     }
 }
 
-a {
+.hover-effect {
     text-decoration: none;
     position: relative;
     overflow: hidden;
@@ -217,11 +222,11 @@ a {
     padding: 2px;
 }
 
-a:hover {
+.hover-effect:hover {
     color: #d6d0cc;
 }
 
-a::after {
+.hover-effect::after {
     content: "";
     position: absolute;
     display: block;
@@ -232,7 +237,7 @@ a::after {
     transition: transform 0.5s ease;
 }
 
-a:hover::after {
+.hover-effect:hover::after {
     transform: scale(1);
 }
 
