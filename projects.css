@@ -1,0 +1,9 @@
+.projects {
+    width: 100vw;
+    height: 50vh;
+    background-image: linear(circle, rgb(0, 67, 79), rgb(16, 15, 15), rgb(1, 15, 39));
+    color: #c4c2cf;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-weight: 800;
+    text-align: justify;
+}

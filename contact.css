@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: grid;
+    width: 100%;
+}
+
+.wrapper .button {
+    display: flex;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background: linear-gradient(135deg, #043e28, #2e5b64);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    width: 164px;
+
+    padding-right: 20px;
+
+    span {
+        display: block;
+    }
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 60px;
+}
+
+.wrapper .button .icon .link-img {
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.wrapper .button span {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 10px;
+    user-select: none;
+}
+
+span {
+    color: #ffffff;
+    display: none;
+}
+
+.link-img {
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    margin: 10px 0px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: fit-content;
+    color: #c4c2cf;
+    font-family: 'Ubuntu Sans', sans-serif;
+    font-weight: 800;
+    text-align: justify;
+}
