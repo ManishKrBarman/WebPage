@@ -21,7 +21,7 @@
     position: absolute;
     width: 240px;
     height: 320px;
-    background: radial-gradient(circle, #000000, #ff0000, #0066ff);
+    background-color: transparent;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -42,12 +42,11 @@
 }
 
 .container:hover .card {
-    transform: rotate(calc(var(--i) * 5deg)) translate(calc(var(--i) * 120px), -50px);
+    transform: rotate(calc(var(--i) * 10deg)) translate(calc(var(--i) * 150px), -20px);
 }
 
 .container:hover .card img {
     opacity: 0.5;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
 }
 
 .container .card:hover {
@@ -61,7 +60,6 @@
 }
 
 .container .card::before {
-    content: attr(data-text);
     position: absolute;
     top: 0;
     white-space: nowrap;
@@ -75,13 +73,24 @@
     z-index: 1000;
     opacity: 1;
     text-align: center;
-    transform: translateY(100px);
 }
 
 .container .card:hover::before {
+    content: attr(data-text);
     top: -40px;
     opacity: 1;
-    transform: translateY(0px);
+
+    animation: text-animation 0.5s ease-in-out;
+}
+
+@keyframes text-animation {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .container .card::after {
@@ -90,11 +99,10 @@
     top: -50px;
     width: 50px;
     height: 8px;
-    background: linear-gradient(90deg, #ff000092, #ff9d009f);
+    background: linear-gradient(90deg, #00aeff99, #9000ff94);
     transition: 0.5s;
     transform: scaleY(0);
     transform-origin: top;
-    z-index: -1;
 }
 
 .container .card:hover::after {
