@@ -61,21 +61,9 @@ li::after {
 }
 
 .main {
-    padding: 10px 20px;
-}
-
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Make the body fill the viewport and center everything */
-.main {
-    height: 85vh;
+    height: 50vh;
     display: flex;
+    padding: 10px 20px;
     justify-content: space-around;
     align-items: center;
 }
