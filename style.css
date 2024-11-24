@@ -15,7 +15,13 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: transparent;
+    background: linear-gradient(90deg, #ffe96e, #f5b273, #ff2525);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientAnimation 4s infinite ease-in-out;
+    user-select: none;
 }
 
 header {
@@ -52,10 +58,6 @@ li::after {
     font-size: medium;
     cursor: pointer;
     transition: color 0.3s ease;
-}
-
-li:hover {
-    color: rgb(255, 255, 255);
 }
 
 .main {
@@ -114,7 +116,6 @@ li:hover {
         background-position: 0% 50%;
     }
 }
-
 
 /* The scene container with perspective */
 .scene {
@@ -218,12 +219,7 @@ li:hover {
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    color: #e8e9c3;
     padding: 2px;
-}
-
-.hover-effect:hover {
-    color: #d6d0cc;
 }
 
 .hover-effect::after {
@@ -232,7 +228,7 @@ li:hover {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: #d6d0cc;
+    background: linear-gradient(90deg, #ffe96e, #f5b273, #ff2525);
     transform: scale(0);
     transition: transform 0.5s ease;
 }
