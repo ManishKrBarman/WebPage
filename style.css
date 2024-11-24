@@ -35,7 +35,6 @@ nav {
 }
 
 .logo img {
-    cursor: none;
     filter: brightness(100);
     filter: invert(1);
 }
@@ -45,6 +44,7 @@ ul.nav-links {
     gap: 20px;
     list-style: none;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 li::after {
@@ -72,7 +72,7 @@ li:hover {
 
 /* Make the body fill the viewport and center everything */
 .main {
-    height: 100vh;
+    height: 85vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -92,6 +92,7 @@ li:hover {
     /* Clips gradient to the text */
     animation: gradientAnimation 4s infinite ease-in-out;
     /* Infinite animation */
+    user-select: none;
 }
 
 /* Animation for gradient */
