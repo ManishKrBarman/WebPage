@@ -61,7 +61,7 @@ li::after {
 }
 
 .main {
-    height: 50vh;
+    height: 80vh;
     display: flex;
     padding: 10px 20px;
     justify-content: space-around;
