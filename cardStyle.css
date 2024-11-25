@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.main {
+    height: 25vh;
+}
+
 .container {
     position: relative;
     width: 100vw;
@@ -19,10 +23,11 @@
 
 .container .card {
     position: absolute;
-    width: 240px;
-    height: 320px;
-    background-color: transparent;
-    border-radius: 10px;
+    width: 200px;
+    height: 280px;
+    /* background-color: transparent; */
+    background: linear-gradient(135deg, #014c5b, #060167);
+    border-radius: 25px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -31,7 +36,7 @@
 
 .container .card img {
     position: absolute;
-    width: 75%;
+    width: 95%;
     height: 75%;
     border-radius: 10px;
     object-fit: cover;
@@ -97,7 +102,7 @@
     top: -50px;
     width: 50px;
     height: 8px;
-    background: linear-gradient(90deg, #00aeff99, #9000ff94);
+    /* background: linear-gradient(90deg, #00aeff99, #9000ff94); */
     transition: 0.5s;
     transform: scaleY(0);
     transform-origin: top;
