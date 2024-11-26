@@ -108,6 +108,34 @@
     transform-origin: top;
 }
 
-.container .card:hover::after {
+/* .container .card:hover::after {
     transform: scaleY(50);
+} */
+
+@media screen and (max-width: 460px) {
+    .container .card {
+        display: flex;
+        width: 100px;
+        height: 120px;
+        /* background-color: transparent; */
+        /* background: linear-gradient(135deg, #014c5b, #060167); */
+        border-radius: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .card img {
+        position: absolute;
+        width: 85%;
+        height: 55%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: 0.5s;
+        /* filter: grayscale(1) contrast(2); */
+    }
+
+
+
 }
