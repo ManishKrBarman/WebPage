@@ -30,19 +30,14 @@ header {
     width: 100%;
     backdrop-filter: blur(6px);
     z-index: 999;
-    box-shadow: 0px 0px 10px #e8e9c3;
+    box-shadow: 0 0 10px #e8e9c3;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 30px;
-}
-
-.logo img {
-    filter: brightness(100);
-    filter: invert(1);
+    padding: 5px 5px;
 }
 
 ul.nav-links {
@@ -51,13 +46,6 @@ ul.nav-links {
     list-style: none;
     transition: all 0.3s ease;
     user-select: none;
-}
-
-li::after {
-    font-weight: bold;
-    font-size: medium;
-    cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 .main {
@@ -73,21 +61,17 @@ li::after {
     font-weight: bold;
     text-align: center;
     color: transparent;
-    /* Text color is transparent to allow gradient visibility */
     background: linear-gradient(90deg, #ff6ec4, #7873f5, #32d5d6, #ff6ec4);
     background-size: 300% 300%;
-    /* Enlarged background for smooth animation */
     -webkit-background-clip: text;
     background-clip: text;
-    /* Clips gradient to the text */
     animation: gradientAnimation 4s infinite ease-in-out;
-    /* Infinite animation */
     user-select: none;
 }
 
+.logo img,
 .logo-img {
-    filter: brightness(100);
-    filter: invert(1);
+    filter: brightness(100) contrast(1);
 }
 
 /* Animation for gradient */
@@ -105,21 +89,19 @@ li::after {
     }
 }
 
-/* The scene container with perspective */
+/* Cube Styles */
 .scene {
     perspective: 800px;
-    /* Adds depth to the 3D space */
 }
 
-/* The cube itself */
 .cube {
     position: relative;
     width: 200px;
     height: 200px;
     transform-style: preserve-3d;
-    transition: animation-duration 1s ease-in-out;
     animation: rotateCube 5s infinite linear;
     background-color: rgba(0, 0, 0, 0.1);
+    transition: animation-duration 1s ease-in-out;
 }
 
 .cube:hover {
@@ -127,7 +109,6 @@ li::after {
     cursor: pointer;
 }
 
-/* Faces of the cube */
 .face {
     position: absolute;
     width: 200px;
@@ -137,47 +118,36 @@ li::after {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
     clip-path: inset(0px round 40px);
-    /* backface-visibility: hidden; */
 }
 
 .face::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* background: #dcdcdc; */
-    /* A neutral color for the backface */
     border-radius: 40px;
-    /* Match front side curvature */
     transform: translateZ(-1px);
-    /* Slightly behind the front face */
 }
 
-/* Front face */
 .front {
     transform: translateZ(100px);
 }
 
-/* Back face */
 .back {
     transform: rotateY(180deg) translateZ(100px);
 }
 
-/* Left face */
 .left {
     transform: rotateY(-90deg) translateZ(100px);
 }
 
-/* Right face */
 .right {
     transform: rotateY(90deg) translateZ(100px);
 }
 
-/* Top face */
 .top {
     transform: rotateX(90deg) translateZ(100px);
 }
 
-/* Bottom face */
 .bottom {
     transform: rotateX(-90deg) translateZ(100px);
 }
@@ -193,18 +163,8 @@ li::after {
     }
 }
 
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: flex;
-        align-items: flex-end;
-        z-index: 1000;
-        padding: 10px 10px;
-    }
-}
-
+/* Hover Effect */
 .hover-effect {
-    text-decoration: none;
     position: relative;
     overflow: hidden;
     padding: 2px;
@@ -225,78 +185,33 @@ li::after {
     transform: scale(1);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        align-items: flex-end;
+        padding: 10px 10px;
+    }
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 505px) {
     h1 {
         font-size: 1.5em;
     }
 
-    ul.nav-links {
-        display: flex;
-        font-size: smaller;
-        gap: 20px;
-        list-style: none;
-        transition: all 0.3s ease;
-    }
-
     .cube {
-        position: relative;
         width: 100px;
         height: 100px;
-        transform-style: preserve-3d;
-        transition: animation-duration 1s linear;
-        animation: rotateCube 5s infinite linear;
     }
 
     .face {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(135deg, #003757, #a02fdd);
-        border: 1px solid #002d7a;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 100px;
+        height: 100px;
         border-radius: 20%;
     }
 }
 
-@media screen and (max-width: 495px) {
-    ul.nav-links {
-        display: flex;
-        font-size: 1rem;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        list-style: none;
-        transition: all 0.3s ease;
-    }
-
+@media screen and (max-width: 455px) {
     .main {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    ul.nav-links {
-        display: flex;
-        font-size: 1rem;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        list-style: none;
-        transition: all 0.3s ease;
-    }
-
-    a {
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        color: #e8e9c3;
-        padding: 2px;
-    }
-
-    .main {
-        display: flex;
         flex-direction: column-reverse;
     }
 }
